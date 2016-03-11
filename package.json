@@ -1,0 +1,64 @@
+{
+  "name": "parse-pc2",
+  "version": "1.0.1",
+  "scripts": {
+    "lint": "standard && jshint index.js",
+    "bundle": "browserify index.js -o bundle.js",
+    "start": "budo index.js --open -- -t glslify -t brfs"
+  },
+  "devDependencies": {
+    "jshint": "latest",
+    "mocha": "latest",
+    "standard": "^5.4.1",
+    "budo": "^6.0.0",
+    "glslify": "^3.1.0",
+    "brfs": "^1.4.3"
+  },
+  "browserify": {
+    "transform": [
+      "glslify", "brfs"
+    ]
+  },
+  "dependencies": {
+    "turntable-camera": "^1.0.0",
+    "gl-clear": "^2.0.0",
+    "gl-context": "^0.1.0",
+    "canvas-fit": "^1.2.0",
+    "gl-geometry": "^3.1.0",
+    "gl-shader": "^4.1.0",
+    "gl-mat4": "^1.1.4",
+    "gl-mat3": "latest",
+    "gl-vec3": "latest",
+    "parse-wavefront-obj": "^1.0.1",
+    "normals": "^0.1.0",
+    "unindex-mesh": "^2.0.0",
+    "face-normals": "0.0.0",
+    "async-image-loader": "latest",
+    "teapot": "latest",
+    "gl-texture-cube": "latest",
+    "gl-cubemap-placeholder": "latest"
+  },
+  "description": "Parse .PC2 vertex animation files",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oparisy/parse-pc2.git"
+  },
+  "keywords": [
+    "ecosystem:stackgl",
+    "pc2",
+    "parser",
+    "animation",
+    "3D",
+    "mesh"
+  ],
+  "author": "Olivier Parisy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oparisy/parse-pc2/issues"
+  },
+  "homepage": "https://github.com/oparisy/parse-pc2#readme"
+}
